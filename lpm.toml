@@ -1,0 +1,16 @@
+# Manifest for this project. See https://luaupm.com/docs
+# Add dependencies with `lpm add <scope/name>`, then run `lpm install`.
+
+[indices]
+wally = "https://github.com/UpliftGames/wally-index"
+pesde = "https://github.com/pesde-pkg/index"
+
+[dependencies]
+vide = { name = "lpm/vide", version = "^" }
+
+[scripts]
+serve = ["larvae process --watch", "rojo serve"]
+
+[tools]
+rojo = "rojo-rbx/rojo@7.7.0"
+larvae = "larvae-luau/larvae@0.8.1"

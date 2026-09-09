@@ -1,0 +1,11 @@
+{
+    "explorer.compactFolders": false,
+    "editor.formatOnSave": true,
+
+    "[luau]": {
+        "editor.defaultFormatter": "AndrewBordis.larvae"
+    },
+    "files.exclude": {
+        "dist": true
+    }
+}

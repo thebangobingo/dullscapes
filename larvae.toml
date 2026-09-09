@@ -1,0 +1,25 @@
+# larvae configuration, run `larvae self code` for editor completion.
+# No default.project.json found, the roblox-string target needs one
+# or a [requires.mounts] table.
+
+input = "src"
+output = "dist"
+target = "roblox-string"
+
+[aliases]
+package = "./packages/roblox"
+
+[fmt]
+recommended = true
+column_width = 120
+indent_type = "tabs"
+indent_width = 4
+quote_style = "auto-prefer-double"
+
+[lint]
+recommended = true
+std = "roblox"
+
+[lsp]
+analyzer = true
+completion.enabled = true
