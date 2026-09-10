@@ -1,1 +1,1 @@
-null
+{"name":"nullscape-remake","className":"DataModel","filePaths":["default.project.json"],"children":[{"name":"ReplicatedStorage","className":"ReplicatedStorage","children":[{"name":"Shared","className":"Folder","children":[{"name":"data","className":"ModuleScript","filePaths":["src/shared/data.luau"]}]}]}]}

@@ -2,6 +2,49 @@
 version = 2
 
 [[package]]
+name = "alicesaidhi/conch"
+version = "0.4.0"
+environment = "roblox"
+link = "conch"
+index = "https://github.com/UpliftGames/wally-index"
+type = "zip"
+url = "https://api.wally.run/v1/package-contents/alicesaidhi/conch/0.4.0"
+
+[[package]]
+name = "alicesaidhi/conch-language"
+version = "0.4.0"
+environment = "roblox"
+index = "https://github.com/UpliftGames/wally-index"
+type = "zip"
+url = "https://api.wally.run/v1/package-contents/alicesaidhi/conch-language/0.4.0"
+
+[[package]]
+name = "alicesaidhi/conch-ui"
+version = "0.4.0"
+environment = "roblox"
+link = "conch_ui"
+index = "https://github.com/UpliftGames/wally-index"
+type = "zip"
+url = "https://api.wally.run/v1/package-contents/alicesaidhi/conch-ui/0.4.0"
+
+[[package]]
+name = "centau/vide"
+version = "0.4.1"
+environment = "roblox"
+index = "https://github.com/UpliftGames/wally-index"
+type = "zip"
+url = "https://api.wally.run/v1/package-contents/centau/vide/0.4.1"
+
+[[package]]
+name = "ericplane/scribe"
+version = "2.3.0"
+environment = "roblox"
+link = "scribe"
+index = "https://github.com/UpliftGames/wally-index"
+type = "zip"
+url = "https://api.wally.run/v1/package-contents/ericplane/scribe/2.3.0"
+
+[[package]]
 name = "lpm/vide"
 version = "0.4.0"
 environment = "roblox"

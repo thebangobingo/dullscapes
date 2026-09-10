@@ -7,6 +7,9 @@ pesde = "https://github.com/pesde-pkg/index"
 
 [dependencies]
 vide = { name = "lpm/vide", version = "^" }
+conch = { name = "alicesaidhi/conch", version = "^", index = "wally" }
+conch_ui = { name = "alicesaidhi/conch-ui", version = "^", index = "wally" }
+scribe = { name = "ericplane/scribe", version = "^", index = "wally" }
 
 [scripts]
 serve = ["larvae process --watch", "rojo serve"]

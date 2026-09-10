@@ -7,7 +7,7 @@ output = "dist"
 target = "roblox-string"
 
 [aliases]
-package = "./packages/roblox"
+packages = "./packages/roblox"
 
 [fmt]
 recommended = true
