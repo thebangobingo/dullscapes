@@ -12,7 +12,7 @@ conch_ui = { name = "alicesaidhi/conch-ui", version = "^", index = "wally" }
 scribe = { name = "ericplane/scribe", version = "^", index = "wally" }
 
 [scripts]
-serve = ["larvae process --watch", "rojo serve"]
+serve = ["larvae process --watch", "rojo serve .larvae/build.project.json"]
 
 [tools]
 rojo = "rojo-rbx/rojo@7.7.0"

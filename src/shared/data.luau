@@ -19,4 +19,5 @@ return Scribe.new({
 	ProfileStoreIndex = "PlayerData",
 	ProfileKeyPrefix = "Player_",
 	ServerStore = server,
+	Mode = "Mock",
 })
