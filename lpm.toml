@@ -13,7 +13,10 @@ scribe = { name = "ericplane/scribe", version = "^", index = "wally" }
 
 [scripts]
 serve = ["larvae process --watch", "rojo serve .larvae/build.project.json"]
+sync-assets = "tungsten sync cloud"
 
 [tools]
 rojo = "rojo-rbx/rojo@7.7.0"
 larvae = "larvae-luau/larvae@0.8.1"
+tungsten = "pwnwrkz/tungsten@3.1.1"
+# lest = "lest-luau/lest@0.6.0"

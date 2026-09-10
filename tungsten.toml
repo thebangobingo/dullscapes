@@ -1,0 +1,13 @@
+[creator]
+type = "user"
+id = 7682220546
+
+[codegen]
+style = "flat"
+strip_extension = true
+ts_declaration = false
+
+[inputs.assets]
+path = "assets/**/*"
+output_path = "src/shared/assets.luau"
+packable = false

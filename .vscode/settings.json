@@ -6,6 +6,6 @@
         "editor.defaultFormatter": "AndrewBordis.larvae"
     },
     "files.exclude": {
-        "dist": true
+        "dist": true,
     }
 }
