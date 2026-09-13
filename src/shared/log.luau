@@ -20,6 +20,5 @@ end
 Log.debug = createLogFunction("DEBUG", print, false)
 Log.info = createLogFunction("INFO", print, true)
 Log.warn = createLogFunction("WARN", warn, true)
-Log.error = createLogFunction("ERROR", error, true)
 
 return Log

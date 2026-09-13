@@ -11,3 +11,4 @@ ts_declaration = false
 path = "assets/**/*"
 output_path = "src/shared/assets.luau"
 packable = false
+type = "model"
