@@ -5,29 +5,27 @@ local Config = require("./config")
 local Log = require("@shared/log")
 
 local TILES_ARE_VALIDATED = false
+local ValidatedTiles: { [Types.TileName]: Types.TileModel } = {}
 
-local function ValidateTile(tileName: string, tileData: Types.TileData): boolean
+local function GetValidatedTile(tileName: string, tileData: Types.TileData): Types.TileModel?
 	local instance = AssetService:LoadAssetAsync(tileData.AssetId):GetChildren()[1]
 
 	if not instance:IsA("Model") then
 		Log.warn(`Tile '{tileName}' is not a model.`)
-		return false
+		return
 	end
 
 	local connections = instance:FindFirstChild("Connections")
 	local zones = instance:FindFirstChild("Zones")
 
-	print(instance.Name)
-	print(instance:GetChildren())
-
 	if not connections then
 		Log.warn(`Tile '{tileName}' does not include a holder named 'Connections'.`)
-		return false
+		return
 	end
 
 	if not zones then
 		Log.warn(`Tile '{tileName}' does not include a holder named 'Zones'.`)
-		return false
+		return
 	end
 
 	for _, connection in connections:GetChildren() do
@@ -42,28 +40,31 @@ local function ValidateTile(tileName: string, tileData: Types.TileData): boolean
 		end
 	end
 
-	return true
+	return instance :: Types.TileModel
 end
 
 local function ValidateAllTiles(): boolean
 	for tileName, tileData in Config do
-		local validated = ValidateTile(tileName, tileData)
+		local validatedTile = GetValidatedTile(tileName, tileData)
 
-		if not validated then
+		if not validatedTile then
 			return false
 		end
+
+		ValidatedTiles[tileName] = validatedTile
 	end
 
 	TILES_ARE_VALIDATED = true
 	return true
 end
 
-local function LoadTile(assetId: string): Types.TileModel
+local function LoadTile(name: Types.TileName): Types.TileModel?
 	if not TILES_ARE_VALIDATED then
-		Log.warn("Tiles should be validated before use. Please confirm 'ValidateAlTiles' is being called and handled properly.")
+		Log.warn("Tiles should be validated before use. Please confirm 'ValidateAlTiles' is being called and no errors exist.")
+		return
 	end
 
-	return AssetService:LoadAssetAsync(assetId):GetChildren()[1] :: Types.TileModel
+	return ValidatedTiles[name]
 end
 
 return {
