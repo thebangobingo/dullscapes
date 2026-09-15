@@ -40,6 +40,13 @@ local function GetValidatedTile(tileName: string, tileData: Types.TileData): Typ
 		end
 	end
 
+	for _, part in instance:GetDescendants() do
+		if part:IsA("BasePart") then
+			part.CastShadow = false
+			part.Anchored = true
+		end
+	end
+
 	return instance :: Types.TileModel
 end
 
